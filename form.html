@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4f46e5">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Form pemesanan tiket Picnic Music Festival COMMVAGANZA 10.0 - Sabtu, 12 September 2026 di Bandar Lampung.">
+<meta property="og:title" content="Form Pemesanan Tiket - COMMVAGANZA 10.0 | Bandar Lampung 2026">
+<meta property="og:description" content="Lengkapi data pembeli untuk melanjutkan ke pembayaran. Sabtu, 12 September 2026 di Bandar Lampung.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="banner.png">
+<meta property="og:image:alt" content="Banner COMMVAGANZA 10.0 Bandar Lampung 2026">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="banner.png" fetchpriority="high">
+<title>Form Pemesanan Tiket - COMMVAGANZA 10.0 | Bandar Lampung 2026</title>
+<style>
+:root{
+--accent:#4f46e5;--accent-deep:#4338ca;--accent-press:#3730a3;--accent-ring:rgba(79,70,229,.14);--accent-soft:#eef2ff;--accent-line:#c7d2fe;
+--ink:#111827;--body:#374151;--soft:#6b7280;--muted:#9ca3af;
+--line:#e5e7eb;--line-strong:#d1d5db;--fill:#f3f4f6;--surface:#f9fafb;--canvas:#f7f8fa;
+--green:#047857;
+--red:#dc2626;--red-tint:#fef2f2;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+button,input,select,textarea{font-family:inherit}
+body{background:var(--canvas);color:var(--body);font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding-bottom:calc(112px + env(safe-area-inset-bottom));overflow-x:hidden;min-height:100vh}
+img{max-width:100%}
+button{font:inherit}
+input[type="checkbox"]{-webkit-appearance:auto;appearance:auto}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.container{width:100%;max-width:480px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 0 1px rgba(17,24,39,.04),0 12px 40px rgba(17,24,39,.05);position:relative}
+.app-header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 1px 3px rgba(17,24,39,.05)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#fff}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-img{width:38px;height:38px;border-radius:10px;object-fit:cover;border:1px solid var(--line)}
+.logo-text{height:30px;width:auto;object-fit:contain}
+.lang{background:var(--fill);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;color:var(--soft)}
+.progress{position:relative;padding:16px 28px 18px;border-top:1px solid var(--line);background:#fff}
+.progress-inner{position:relative}
+.progress-track{position:absolute;top:13px;left:14px;right:14px;height:3px;background:var(--fill);border-radius:999px}
+.progress-fill{height:100%;width:33.33%;background:var(--accent);border-radius:999px}
+.progress-steps{position:relative;z-index:2;display:flex;justify-content:space-between;list-style:none}
+.step{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+.step-dot{width:28px;height:28px;border-radius:50%;background:#fff;border:1.5px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--muted)}
+.step-num{line-height:1}
+.step-check{display:none;width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.step.completed .step-dot{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent-deep)}
+.step.completed .step-num{display:none}
+.step.completed .step-check{display:block}
+.step.active .step-dot{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 0 4px var(--accent-ring)}
+.step-label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.step.active .step-label{color:var(--ink)}
+.step.completed .step-label{color:var(--accent-deep)}
+.banner-wrap{padding:16px 20px 0}
+.banner-img{width:100%;height:auto;border-radius:14px;display:block;border:1px solid var(--line)}
+.content{padding:24px 20px}
+.page-title{font-size:20px;font-weight:800;margin-bottom:4px;color:var(--ink);letter-spacing:-.01em}
+.page-subtitle{font-size:13px;color:var(--soft);margin-bottom:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px}
+.card-title{font-size:15px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.card-title::before{content:'';width:4px;height:16px;background:var(--accent);border-radius:2px;flex:none}
+.title-note{font-size:11px;font-weight:600;color:var(--muted)}
+.summary-edit{margin-left:auto;font-size:12px;font-weight:700;color:var(--accent);text-decoration:none}
+.summary-edit:hover{text-decoration:underline}
+.event-hero{text-align:center;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.event-hero h2{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:2px}
+.event-hero p{color:var(--soft);font-size:13px;margin-bottom:12px}
+.event-info{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;color:var(--body);font-size:12px;font-weight:600;background:var(--surface);border:1px solid var(--line);padding:8px 12px;border-radius:10px}
+.event-info div{display:flex;align-items:center;gap:6px}
+.event-info svg{width:13px;height:13px;color:var(--muted);flex:none}
+.summary-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px;color:var(--soft)}
+.summary-row strong{color:var(--ink);font-weight:600;text-align:right;overflow-wrap:anywhere;max-width:70%}
+.summary-row.total{font-size:17px;font-weight:800;color:var(--ink);border-bottom:none;border-top:2px solid var(--line);margin-top:8px;padding-top:12px}
+.summary-row.total .summary-value{color:var(--accent);font-variant-numeric:tabular-nums}
+.coupon-row .summary-value{color:var(--green);font-weight:700;font-variant-numeric:tabular-nums}
+.total-note{font-size:12px;font-weight:600;color:var(--green);margin-top:6px}
+.no-ticket-msg{color:var(--red);font-size:13px;font-weight:600}
+.form-group{margin-bottom:16px}
+.form-group:last-child{margin-bottom:0}
+.form-group label{display:block;font-weight:600;font-size:13px;margin-bottom:8px;color:var(--ink);cursor:pointer}
+.input-icon-wrap{position:relative;display:flex;align-items:center}
+.input-icon{position:absolute;left:14px;width:16px;height:16px;color:var(--muted);pointer-events:none}
+input,select,textarea{width:100%;padding:12px 14px 12px 40px;border-radius:10px;border:1px solid var(--line-strong);background:var(--surface);font-size:14px;color:var(--ink)}
+textarea{resize:vertical;min-height:84px;padding-left:14px}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239CA3AF' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px var(--accent-ring)}
+input.error,select.error,textarea.error{border-color:var(--red);background:var(--red-tint)}
+.field-error{display:none;font-size:11.5px;font-weight:600;color:var(--red);margin-top:6px}
+.field-error:not(:empty){display:block}
+.check{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);padding:12px;border-radius:10px;margin-top:10px}
+.check:first-of-type{margin-top:0}
+.check.error{border-color:var(--red);background:var(--red-tint)}
+.check input{width:18px;height:18px;min-width:18px;accent-color:var(--accent);cursor:pointer;margin-top:1px;box-shadow:none;padding:0}
+.check label{font-size:12px;color:var(--body);cursor:pointer;line-height:1.5}
+.holder-section{margin-bottom:16px}
+.holder-section-title{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.holder-section-sub{font-size:13px;color:var(--soft);margin-top:2px}
+.holder-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 20px 20px 22px;margin-bottom:14px;position:relative;overflow:hidden}
+.holder-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent)}
+.holder-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.holder-badge{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.holder-info{flex:1}
+.holder-title{font-size:14px;font-weight:700;color:var(--ink);line-height:1.3}
+.holder-sub{font-size:11px;color:var(--muted);font-weight:500;margin-top:2px}
+.same-check{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:10px 12px;background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:10px;cursor:pointer;font-size:12px;font-weight:700;color:var(--accent-deep)}
+.same-check:hover{background:#e3edff}
+.same-check input{width:16px;height:16px;min-width:16px;accent-color:var(--accent);cursor:pointer;box-shadow:none;padding:0;margin:0}
+.holder-card input:read-only{opacity:.6;cursor:not-allowed;background:var(--surface)}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:14px 20px calc(14px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:saturate(150%) blur(12px);-webkit-backdrop-filter:saturate(150%) blur(12px);border-top:1px solid var(--line);z-index:998}
+.sticky-inner{max-width:440px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.sticky-total{display:flex;flex-direction:column;gap:1px;min-width:0}
+.sticky-total-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.sticky-total-amount{font-size:17px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.btn-lanjut{flex:1;min-width:170px;height:48px;border:none;border-radius:12px;background:var(--accent);color:#fff;font-size:15px;font-weight:800;padding:0 20px;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:8px;white-space:nowrap;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.btn-lanjut:hover{background:var(--accent-deep)}
+.btn-lanjut:active{background:var(--accent-press)}
+.btn-lanjut:disabled{background:var(--muted);cursor:not-allowed}
+.btn-lanjut svg{width:16px;height:16px;flex:none}
+.site-footer{text-align:center;padding:32px 20px 8px;margin-top:12px;border-top:1px solid var(--line)}
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:14px}
+.footer-logo{width:28px;height:28px;border-radius:8px;object-fit:cover}
+.footer-name{height:22px;width:auto;object-fit:contain}
+.footer-contact{display:flex;flex-direction:column;align-items:center;gap:8px}
+.footer-contact-item{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--body);opacity:.75;text-decoration:none}
+.footer-contact-item:hover{opacity:1}
+.footer-contact-item svg{width:15px;height:15px;flex-shrink:0}
+.footer-sep{height:1px;background:var(--line);margin:18px 0 14px}
+.footer-copy{font-size:11.5px;font-weight:500;color:var(--muted)}
+.loading-overlay{display:none;position:fixed;inset:0;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:99999;justify-content:center;align-items:center;flex-direction:column;padding:24px;text-align:center}
+.loading-overlay.active{display:flex}
+.spinner-box{width:64px;height:64px;display:flex;justify-content:center;align-items:center;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(17,24,39,.1);margin-bottom:18px}
+.spinner{width:30px;height:30px;border:4px solid var(--accent-ring);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;flex:0 0 auto}
+.spinner-sm{width:16px;height:16px;border-width:2.5px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-size:15px;font-weight:700;color:var(--ink)}
+.loading-sub{font-size:13px;color:var(--soft);margin-top:6px}
+.toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:0 10px 30px rgba(17,24,39,.25);z-index:300;max-width:calc(100vw - 40px);text-align:center}
+.nojs-warning{background:#fffbeb;border-bottom:1px solid #fde68a;color:#92400e;font-size:12px;font-weight:600;text-align:center;padding:10px 16px;line-height:1.5}
+@media (max-width:480px){.container{box-shadow:0 0 0 1px rgba(17,24,39,.04)}}
+@media (max-width:380px){
+.topbar{padding:12px 16px}
+.content{padding:20px 16px}
+.banner-wrap{padding:14px 16px 0}
+.card{padding:16px}
+.event-info{gap:8px}
+.sticky{padding:12px 16px}
+.sticky-inner{flex-direction:column;align-items:stretch;gap:10px}
+.btn-lanjut{min-width:0;width:100%}
+}
+@media (max-width:360px){.step-label{font-size:9px;letter-spacing:.2px}.progress{padding:14px 16px 16px}}
+@media (prefers-reduced-motion:reduce){.spinner{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <header class="app-header">
+        <div class="topbar">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="ETATIX" class="logo-img" width="38" height="38">
+                <img src="logo-saya.jpg" alt="ETATIX" class="logo-text">
+            </a>
+            <span class="lang" title="Bahasa Indonesia">ID</span>
+        </div>
+
+        <div class="progress" aria-label="Progress pemesanan">
+            <div class="progress-inner">
+                <div class="progress-track" aria-hidden="true"><div class="progress-fill"></div></div>
+                <ol class="progress-steps">
+                    <li class="step completed">
+                        <div class="step-dot">
+                            <span class="step-num">1</span>
+                            <svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="step-label">Pilih Tiket</span>
+                    </li>
+                    <li class="step active" aria-current="step">
+                        <div class="step-dot">
+                            <span class="step-num">2</span>
+                            <svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="step-label">Data Pembeli</span>
+                    </li>
+                    <li class="step">
+                        <div class="step-dot">
+                            <span class="step-num">3</span>
+                            <svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="step-label">Pembayaran</span>
+                    </li>
+                    <li class="step">
+                        <div class="step-dot">
+                            <span class="step-num">4</span>
+                            <svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <span class="step-label">E-Ticket</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </header>
+
+    <noscript><div class="nojs-warning">JavaScript dinonaktifkan. Aktifkan JavaScript di browser Anda untuk melihat ringkasan pesanan dan melanjutkan pemesanan.</div></noscript>
+
+    <div class="banner-wrap">
+        <img class="banner-img" src="banner.png" alt="COMMVAGANZA 10.0" fetchpriority="high" decoding="async">
+    </div>
+
+    <div class="content">
+
+        <h1 class="page-title">Form Pemesanan Tiket</h1>
+        <p class="page-subtitle">Lengkapi data berikut sebelum melanjutkan ke pembayaran.</p>
+
+        <form id="orderForm" novalidate>
+
+            <div class="card">
+                <div class="event-hero">
+                    <h2>COMMVAGANZA 10.0</h2>
+                    <p>Bandar Lampung 2026</p>
+                    <div class="event-info">
+                        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Sab, 12 Sep 2026</div>
+                        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 14:00 WIB</div>
+                        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Bandar Lampung</div>
+                    </div>
+                </div>
+
+                <div class="card-title"><span>Ringkasan Pesanan</span><a class="summary-edit" href="tiket.html" id="ticketEditLink">Ubah Tiket</a></div>
+
+                <div class="summary-row"><span>Jenis Tiket</span><strong id="jenisTiket">-</strong></div>
+                <div id="detailTiket"></div>
+                <div class="summary-row"><span>Jumlah Tiket</span><strong id="jumlahTiket">0 Tiket</strong></div>
+                <div class="summary-row total"><span>Total Bayar</span><span class="summary-value" id="totalBayar">Rp 0</span></div>
+                <div class="total-note" id="totalNote" hidden></div>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span>Data Pemesan</span><span class="title-note">Pemegang Tiket #1</span></div>
+
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap (sesuai identitas)</label>
+                    <div class="input-icon-wrap">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <input id="nama" type="text" placeholder="Masukkan nama lengkap" autocomplete="name" maxlength="120">
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="identitas">Jenis Identitas</label>
+                    <div class="input-icon-wrap">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5.5 16.5c.6-1.6 4.4-1.6 5 0"/><line x1="14" y1="9" x2="19" y2="9"/><line x1="14" y1="13" x2="19" y2="13"/></svg>
+                        <select id="identitas">
+                            <option value="">Pilih Jenis Identitas</option>
+                            <option>KTP</option>
+                            <option>SIM</option>
+                            <option>Paspor</option>
+                            <option>Kartu Pelajar</option>
+                        </select>
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="nomorId">Nomor Identitas</label>
+                    <div class="input-icon-wrap">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+                        <input id="nomorId" type="text" placeholder="Masukkan nomor identitas" autocomplete="off" maxlength="40">
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail Aktif</label>
+                    <div class="input-icon-wrap">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <input id="email" type="email" placeholder="contoh@email.com" autocomplete="email" maxlength="254">
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="wa">No. WhatsApp Aktif</label>
+                    <div class="input-icon-wrap">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <input id="wa" type="tel" placeholder="08xxxxxxxxxx" autocomplete="tel" inputmode="tel" maxlength="20">
+                    </div>
+                    <small class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat / Tempat Tinggal</label>
+                    <textarea id="alamat" placeholder="Masukkan alamat lengkap" autocomplete="street-address" maxlength="600"></textarea>
+                    <small class="field-error"></small>
+                </div>
+            </div>
+
+            <div id="holderContainer"></div>
+
+            <div class="card">
+                <div class="card-title"><span>Persetujuan</span></div>
+                <div class="check">
+                    <input type="checkbox" id="setuju1">
+                    <label for="setuju1">Data yang saya isi adalah benar dan dapat dipertanggungjawabkan.</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="setuju2">
+                    <label for="setuju2">Saya menyetujui syarat dan ketentuan acara serta kebijakan privasi.</label>
+                </div>
+            </div>
+
+        </form>
+
+        <footer class="site-footer">
+            <div class="footer-brand">
+                <img src="logo.png" alt="ETATIX" class="footer-logo" width="28" height="28" loading="lazy" decoding="async">
+                <img src="logo-saya.jpg" alt="ETATIX" class="footer-name" loading="lazy" decoding="async">
+            </div>
+            <div class="footer-contact">
+                <a class="footer-contact-item" href="https://wa.me/6282385606518" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    +62 823-8560-6518
+                </a>
+                <a class="footer-contact-item" href="mailto:cs@yesplis.com">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    cs@yesplis.com
+                </a>
+            </div>
+            <div class="footer-sep" role="separator"></div>
+            <p class="footer-copy">&copy;2026 Picnic Music Festival COMMVAGANZA 10.0. Informasi berdasarkan materi acara.</p>
+        </footer>
+
+    </div>
+
+</div>
+
+<div class="sticky">
+    <div class="sticky-inner">
+        <div class="sticky-total">
+            <span class="sticky-total-label">Total Bayar</span>
+            <span class="sticky-total-amount" id="stickyTotal">Rp 0</span>
+        </div>
+        <button class="btn-lanjut" id="lanjut" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            Lanjut ke Pembayaran
+        </button>
+    </div>
+</div>
+
+<div id="loading" class="loading-overlay" role="status">
+    <div class="spinner-box"><div class="spinner"></div></div>
+    <div class="loading-text">Memproses Pesanan...</div>
+    <div class="loading-sub">Mohon tunggu sebentar</div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+'use strict';
+
+const store={
+get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
+set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}},
+del:function(k){try{localStorage.removeItem(k)}catch(e){}}
+};
+
+function safeJSON(value,fallback){
+try{
+const parsed=JSON.parse(value);
+return parsed===null||parsed===undefined?fallback:parsed;
+}catch(e){return fallback}
+}
+
+function escapeHTML(str){
+return String(str).replace(/[&<>"']/g,function(c){
+return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+});
+}
+
+function formatRupiah(n){
+return 'Rp '+(Math.round(Number(n)||0)).toLocaleString('id-ID');
+}
+
+const jumlahTiket=Number(store.get('jumlahTiket'))||0;
+const kategoriTiket=store.get('kategoriTiket')||'-';
+const hargaTiket=Number(store.get('hargaTiket'))||0;
+const subtotal=jumlahTiket*hargaTiket;
+const kodeKupon=(store.get('kodeKupon')||'').toUpperCase();
+const diskonPersen=Math.min(Math.max(Number(store.get('diskonKupon'))||0,0),90);
+const diskonNominal=Math.round(subtotal*diskonPersen/100);
+const pakaiKupon=Boolean(kodeKupon)&&diskonPersen>0;
+const hasTicket=jumlahTiket>0&&kategoriTiket!=='-';
+
+const el=function(id){return document.getElementById(id)};
+const jenisTiketEl=el('jenisTiket');
+const detailTiketEl=el('detailTiket');
+const jumlahTiketEl=el('jumlahTiket');
+const totalBayarEl=el('totalBayar');
+const stickyTotalEl=el('stickyTotal');
+const totalNoteEl=el('totalNote');
+const ticketEditLink=el('ticketEditLink');
+const namaEl=el('nama');
+const identitasEl=el('identitas');
+const nomorIdEl=el('nomorId');
+const emailEl=el('email');
+const waEl=el('wa');
+const alamatEl=el('alamat');
+const setuju1El=el('setuju1');
+const setuju2El=el('setuju2');
+const loadingEl=el('loading');
+const lanjutBtn=el('lanjut');
+const formEl=el('orderForm');
+const holderContainer=el('holderContainer');
+const toastEl=el('toast');
+
+const emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const phoneRe=/^(\+62|62|0)8\d{7,12}$/;
+
+let detailHTML='';
+if(hasTicket){
+detailHTML+='<div class="summary-row"><span>'+escapeHTML(kategoriTiket)+' ('+jumlahTiket+'x)</span><strong>'+formatRupiah(subtotal)+'</strong></div>';
+if(pakaiKupon){
+detailHTML+='<div class="summary-row coupon-row"><span>Kupon '+escapeHTML(kodeKupon)+'</span><span class="summary-value">\u2212'+formatRupiah(diskonNominal)+'</span></div>';
+totalNoteEl.textContent='Diskon '+diskonPersen+'% diterapkan saat pembayaran (hemat '+formatRupiah(diskonNominal)+').';
+totalNoteEl.hidden=false;
+}
+jenisTiketEl.textContent=kategoriTiket;
+}else{
+detailHTML='<div class="summary-row"><span class="no-ticket-msg">Belum ada tiket dipilih \u2014 <a class="summary-edit" href="tiket.html">pilih tiket dulu</a></span></div>';
+jenisTiketEl.textContent='-';
+}
+detailTiketEl.innerHTML=detailHTML;
+jumlahTiketEl.textContent=jumlahTiket+' Tiket';
+totalBayarEl.textContent=hasTicket?formatRupiah(subtotal):'Rp 0';
+stickyTotalEl.textContent=hasTicket?formatRupiah(subtotal):'Rp 0';
+ticketEditLink.textContent=hasTicket?'Ubah Tiket':'Pilih Tiket';
+
+document.querySelectorAll('img').forEach(function(img){
+img.addEventListener('error',function(){img.style.display='none';});
+});
+
+let toastTimer;
+function toast(msg){
+toastEl.textContent=msg;
+toastEl.hidden=false;
+clearTimeout(toastTimer);
+toastTimer=setTimeout(function(){toastEl.hidden=true;},2800);
+}
+
+function setFieldError(input,msg){
+input.classList.add('error');
+const group=input.closest('.form-group');
+const msgEl=group?group.querySelector('.field-error'):null;
+if(msgEl)msgEl.textContent=msg;
+}
+
+function clearFieldError(input){
+input.classList.remove('error');
+const group=input.closest('.form-group');
+const msgEl=group?group.querySelector('.field-error'):null;
+if(msgEl)msgEl.textContent='';
+}
+
+function saveDraft(){
+store.set('draft_nama',namaEl.value);
+store.set('draft_identitas',identitasEl.value);
+store.set('draft_nomorId',nomorIdEl.value);
+store.set('draft_email',emailEl.value);
+store.set('draft_wa',waEl.value);
+store.set('draft_alamat',alamatEl.value);
+}
+
+namaEl.value=store.get('draft_nama')||'';
+identitasEl.value=store.get('draft_identitas')||'';
+nomorIdEl.value=store.get('draft_nomorId')||'';
+emailEl.value=store.get('draft_email')||'';
+waEl.value=store.get('draft_wa')||'';
+alamatEl.value=store.get('draft_alamat')||'';
+
+[namaEl,identitasEl,nomorIdEl,emailEl,waEl,alamatEl].forEach(function(input){
+input.addEventListener('input',saveDraft);
+input.addEventListener('change',saveDraft);
+input.addEventListener(input.tagName==='SELECT'?'change':'input',function(){clearFieldError(input);});
+});
+
+const ICON_USER='<svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
+const ICON_MAIL='<svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>';
+const ICON_PHONE='<svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+
+function toggleReadOnly(card,locked){
+card.querySelector('.h-nama').readOnly=locked;
+card.querySelector('.h-email').readOnly=locked;
+card.querySelector('.h-wa').readOnly=locked;
+}
+
+function saveHoldersDraft(){
+const data=[];
+holderContainer.querySelectorAll('.holder-card').forEach(function(card){
+data.push({
+index:parseInt(card.querySelector('.h-nama').dataset.holder,10),
+nama:card.querySelector('.h-nama').value,
+email:card.querySelector('.h-email').value,
+wa:card.querySelector('.h-wa').value,
+same:card.querySelector('.same-pemesan').checked
+});
+});
+store.set('draft_holders',JSON.stringify(data));
+}
+
+function restoreHoldersDraft(){
+const draft=safeJSON(store.get('draft_holders'),[]);
+if(!Array.isArray(draft))return;
+draft.forEach(function(d){
+if(!d||typeof d!=='object')return;
+const input=holderContainer.querySelector('.h-nama[data-holder="'+d.index+'"]');
+if(!input)return;
+const card=input.closest('.holder-card');
+card.querySelector('.h-nama').value=d.nama||'';
+card.querySelector('.h-email').value=d.email||'';
+card.querySelector('.h-wa').value=d.wa||'';
+if(d.same){
+card.querySelector('.same-pemesan').checked=true;
+toggleReadOnly(card,true);
+}
+});
+}
+
+function bindHolderEvents(){
+holderContainer.querySelectorAll('.h-nama,.h-email,.h-wa').forEach(function(input){
+input.addEventListener('input',saveHoldersDraft);
+input.addEventListener('change',saveHoldersDraft);
+input.addEventListener('input',function(){clearFieldError(input);});
+});
+holderContainer.querySelectorAll('.same-pemesan').forEach(function(cb){
+cb.addEventListener('change',function(){
+const card=this.closest('.holder-card');
+const locked=this.checked;
+toggleReadOnly(card,locked);
+if(locked){
+card.querySelector('.h-nama').value=namaEl.value;
+card.querySelector('.h-email').value=emailEl.value;
+card.querySelector('.h-wa').value=waEl.value;
+}
+saveHoldersDraft();
+});
+});
+}
+
+function generateHolders(count){
+holderContainer.innerHTML='';
+if(count<=1)return;
+const head=document.createElement('div');
+head.className='holder-section';
+head.innerHTML='<div class="holder-section-title">Data Pemegang Tiket</div><div class="holder-section-sub">Setiap tiket wajib memiliki data pemegang. Tiket #1 mengikuti data pemesan.</div>';
+holderContainer.appendChild(head);
+for(let i=2;i<=count;i++){
+const card=document.createElement('div');
+card.className='holder-card';
+card.innerHTML=
+'<div class="holder-head">'+
+'<div class="holder-badge">'+i+'</div>'+
+'<div class="holder-info"><div class="holder-title">Data Pemegang Tiket #'+i+'</div><div class="holder-sub">Tiket ke-'+i+' dari '+count+'</div></div>'+
+'</div>'+
+'<label class="same-check"><input type="checkbox" class="same-pemesan" data-holder="'+i+'">Sama dengan Data Pemesan</label>'+
+'<div class="form-group"><label for="h-nama-'+i+'">Nama Lengkap</label><div class="input-icon-wrap">'+ICON_USER+'<input class="h-nama" id="h-nama-'+i+'" data-holder="'+i+'" type="text" placeholder="Nama lengkap pemegang tiket #'+i+'" maxlength="120" autocomplete="off"></div><small class="field-error"></small></div>'+
+'<div class="form-group"><label for="h-email-'+i+'">E-mail Aktif</label><div class="input-icon-wrap">'+ICON_MAIL+'<input class="h-email" id="h-email-'+i+'" data-holder="'+i+'" type="email" placeholder="email@contoh.com" maxlength="254" autocomplete="off"></div><small class="field-error"></small></div>'+
+'<div class="form-group"><label for="h-wa-'+i+'">No. WhatsApp</label><div class="input-icon-wrap">'+ICON_PHONE+'<input class="h-wa" id="h-wa-'+i+'" data-holder="'+i+'" type="tel" placeholder="08xxxxxxxxxx" maxlength="20" inputmode="tel" autocomplete="off"></div><small class="field-error"></small></div>';
+holderContainer.appendChild(card);
+}
+restoreHoldersDraft();
+bindHolderEvents();
+}
+
+function syncSameAsPemesan(){
+let changed=false;
+holderContainer.querySelectorAll('.same-pemesan:checked').forEach(function(cb){
+const card=cb.closest('.holder-card');
+card.querySelector('.h-nama').value=namaEl.value;
+card.querySelector('.h-email').value=emailEl.value;
+card.querySelector('.h-wa').value=waEl.value;
+changed=true;
+});
+if(changed)saveHoldersDraft();
+}
+
+[namaEl,emailEl,waEl].forEach(function(input){
+input.addEventListener('input',syncSameAsPemesan);
+});
+
+generateHolders(jumlahTiket);
+
+[setuju1El,setuju2El].forEach(function(cb){
+cb.addEventListener('change',function(){
+if(cb.checked)cb.closest('.check').classList.remove('error');
+});
+});
+
+function scrollAndFocus(bad){
+if(!bad)return;
+bad.scrollIntoView({block:'center'});
+if(typeof bad.focus==='function')bad.focus({preventScroll:true});
+}
+
+function validatePemesan(){
+let firstBad=null;
+function fail(input,msg){setFieldError(input,msg);if(!firstBad)firstBad=input;}
+if(!namaEl.value.trim())fail(namaEl,'Nama lengkap wajib diisi');
+if(!identitasEl.value)fail(identitasEl,'Pilih jenis identitas');
+if(!nomorIdEl.value.trim())fail(nomorIdEl,'Nomor identitas wajib diisi');
+const email=emailEl.value.trim();
+if(!email)fail(emailEl,'E-mail wajib diisi');
+else if(!emailRe.test(email))fail(emailEl,'Format e-mail tidak valid');
+const wa=waEl.value.trim().replace(/[\s-]/g,'');
+if(!wa)fail(waEl,'No. WhatsApp wajib diisi');
+else if(!phoneRe.test(wa))fail(waEl,'Gunakan format 08xxxxxxxxxx');
+if(!alamatEl.value.trim())fail(alamatEl,'Alamat wajib diisi');
+return firstBad;
+}
+
+function validateHolders(holdersData){
+let firstBad=null;
+function fail(input,msg){setFieldError(input,msg);if(!firstBad)firstBad=input;}
+holderContainer.querySelectorAll('.holder-card').forEach(function(card){
+const idx=parseInt(card.querySelector('.h-nama').dataset.holder,10);
+const hNama=card.querySelector('.h-nama');
+const hEmail=card.querySelector('.h-email');
+const hWa=card.querySelector('.h-wa');
+clearFieldError(hNama);
+clearFieldError(hEmail);
+clearFieldError(hWa);
+if(!hNama.value.trim())fail(hNama,'Nama pemegang tiket wajib diisi');
+const email=hEmail.value.trim();
+if(!email)fail(hEmail,'E-mail wajib diisi');
+else if(!emailRe.test(email))fail(hEmail,'Format e-mail tidak valid');
+const wa=hWa.value.trim().replace(/[\s-]/g,'');
+if(!wa)fail(hWa,'No. WhatsApp wajib diisi');
+else if(!phoneRe.test(wa))fail(hWa,'Gunakan format 08xxxxxxxxxx');
+holdersData.push({tiket:idx,nama:hNama.value.trim(),email:email,wa:hWa.value.trim()});
+});
+return firstBad;
+}
+
+let isSubmitting=false;
+
+async function submitOrder(){
+if(isSubmitting)return;
+
+if(!hasTicket){
+toast('Anda belum memilih tiket. Mengarahkan ke halaman pemilihan tiket...');
+setTimeout(function(){window.location.href='tiket.html';},1400);
+return;
+}
+
+[namaEl,identitasEl,nomorIdEl,emailEl,waEl,alamatEl].forEach(clearFieldError);
+document.querySelectorAll('.check.error').forEach(function(row){row.classList.remove('error');});
+
+const badPemesan=validatePemesan();
+if(badPemesan){
+toast('Mohon lengkapi data pemesan yang ditandai.');
+scrollAndFocus(badPemesan);
+return;
+}
+
+const holdersData=[];
+let badHolder=null;
+if(jumlahTiket>1)badHolder=validateHolders(holdersData);
+if(badHolder){
+toast('Mohon lengkapi data pemegang tiket yang ditandai.');
+scrollAndFocus(badHolder);
+return;
+}
+
+let setujuBad=false;
+[setuju1El,setuju2El].forEach(function(cb){
+if(!cb.checked){cb.closest('.check').classList.add('error');setujuBad=true;}
+});
+if(setujuBad){
+toast('Harap centang seluruh kotak persetujuan.');
+const first=document.querySelector('.check.error');
+if(first)first.scrollIntoView({block:'center'});
+return;
+}
+
+isSubmitting=true;
+lanjutBtn.disabled=true;
+lanjutBtn.setAttribute('aria-busy','true');
+lanjutBtn.innerHTML='<span class="spinner spinner-sm"></span>Memproses...';
+loadingEl.classList.add('active');
+
+const dataPemesan={
+nama:namaEl.value.trim(),
+wa:waEl.value.trim(),
+email:emailEl.value.trim(),
+identitas:identitasEl.value,
+nomorId:nomorIdEl.value.trim(),
+alamat:alamatEl.value.trim(),
+holders:holdersData,
+cart:{
+jenis:kategoriTiket,
+qty:jumlahTiket,
+harga:hargaTiket,
+totalPrice:subtotal
+}
+};
+if(pakaiKupon)dataPemesan.kupon={kode:kodeKupon,persen:diskonPersen,nominal:diskonNominal};
+
+store.set('data_pemesan',JSON.stringify(dataPemesan));
+['draft_nama','draft_identitas','draft_nomorId','draft_email','draft_wa','draft_alamat','draft_holders'].forEach(function(k){store.del(k);});
+
+const pemegangText=holdersData.length>0
+?holdersData.map(function(h){return '#'+h.tiket+': '+h.nama+' | '+h.email+' | '+h.wa;}).join('\n')
+:'Hanya 1 tiket (sama dengan pemesan)';
+
+const payload={
+nama:namaEl.value.trim(),
+identitas:identitasEl.value,
+nomor_id:nomorIdEl.value.trim(),
+email:emailEl.value.trim(),
+whatsapp:waEl.value.trim(),
+alamat:alamatEl.value.trim(),
+pemegang_tiket:pemegangText,
+jenis_tiket:kategoriTiket,
+jumlah_tiket:jumlahTiket,
+total_bayar:subtotal
+};
+if(pakaiKupon)payload.kupon=kodeKupon+' (\u2212'+diskonPersen+'%)';
+
+try{
+await fetch('https://formspree.io/f/mojojdpl',{
+method:'POST',
+headers:{'Content-Type':'application/json','Accept':'application/json'},
+body:JSON.stringify(payload)
+});
+}catch(e){}
+
+setTimeout(function(){window.location.href='qris.html';},900);
+}
+
+lanjutBtn.addEventListener('click',submitOrder);
+formEl.addEventListener('submit',function(e){
+e.preventDefault();
+submitOrder();
+});
+})();
+</script>
+
+</body>
+</html>
