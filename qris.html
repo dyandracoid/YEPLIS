@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4f46e5">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Pembayaran QRIS Picnic Music Festival COMMVAGANZA 10.0 - Sabtu, 12 September 2026 di Bandar Lampung.">
+<meta property="og:title" content="Pembayaran QRIS - COMMVAGANZA 10.0 | Bandar Lampung 2026">
+<meta property="og:description" content="Selesaikan pembayaran QRIS untuk mengkonfirmasi pesanan Anda. Sabtu, 12 September 2026 di Bandar Lampung.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<meta property="og:image:alt" content="Logo COMMVAGANZA 10.0 Bandar Lampung 2026">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Pembayaran QRIS - COMMVAGANZA 10.0 | Bandar Lampung 2026</title>
+<style>
+:root{
+--accent:#4f46e5;--accent-deep:#4338ca;--accent-press:#3730a3;--accent-ring:rgba(79,70,229,.14);--accent-soft:#eef2ff;--accent-line:#c7d2fe;
+--ink:#111827;--body:#374151;--soft:#6b7280;--muted:#9ca3af;
+--line:#e5e7eb;--line-strong:#d1d5db;--fill:#f3f4f6;--surface:#f9fafb;--canvas:#f7f8fa;
+--green:#047857;--green-tint:#ecfdf5;
+--red:#dc2626;--red-tint:#fef2f2;
+--navy:#101c3d;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+button,input{font-family:inherit}
+body{background:var(--canvas);color:var(--body);font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;min-height:100vh;padding-bottom:34px}
+body.no-scroll{overflow:hidden!important}
+img{max-width:100%}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.container{width:100%;max-width:480px;min-height:100vh;margin:auto;background:#fff;box-shadow:0 0 0 1px rgba(17,24,39,.04),0 12px 40px rgba(17,24,39,.05);position:relative}
+.app-header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 1px 3px rgba(17,24,39,.05)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#fff}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-img{width:38px;height:38px;border-radius:10px;object-fit:cover;border:1px solid var(--line)}
+.logo-text{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.lang{background:var(--fill);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;color:var(--soft)}
+.progress{position:relative;padding:16px 24px 18px;border-top:1px solid var(--line);background:#fff}
+.progress-inner{position:relative}
+.progress-track{position:absolute;top:13px;left:14px;right:14px;height:3px;background:var(--fill);border-radius:999px}
+.progress-fill{height:100%;width:66.66%;background:var(--accent);border-radius:999px}
+.progress-steps{position:relative;z-index:2;display:flex;justify-content:space-between;list-style:none}
+.step{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1}
+.step-dot{width:28px;height:28px;border-radius:50%;background:#fff;border:1.5px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--muted)}
+.step-num{line-height:1}
+.step-check{display:none;width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.step.completed .step-dot{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent-deep)}
+.step.completed .step-num{display:none}
+.step.completed .step-check{display:block}
+.step.active .step-dot{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 0 4px var(--accent-ring)}
+.step-label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.step.active .step-label{color:var(--ink)}
+.step.completed .step-label{color:var(--accent-deep)}
+.content{padding:26px 20px 34px}
+.page-title{font-size:20px;font-weight:800;color:var(--ink);text-align:center;letter-spacing:-.01em}
+.page-subtitle{font-size:13px;color:var(--soft);text-align:center;margin:4px 0 20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+.order-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.order-id{margin-top:3px;color:var(--accent);font-weight:800;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;word-break:break-all}
+.total-label{margin-top:14px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.total-price{font-size:26px;font-weight:800;color:var(--ink);margin-top:2px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.coupon-note{margin-top:6px;font-size:12px;font-weight:600;color:var(--green)}
+.no-order{margin-top:12px;font-size:13px;font-weight:600;color:var(--red)}
+.no-order a{color:var(--accent);font-weight:700}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.detail-item{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;line-height:1.35}
+.detail-item span{display:block;color:var(--ink);font-weight:700;font-size:13px;margin-top:3px;word-break:break-word;text-transform:none;letter-spacing:0}
+.timer-box{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;margin-bottom:16px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.timer-label{font-size:12px;font-weight:700;color:var(--soft)}
+.timer{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:1px;font-variant-numeric:tabular-nums}
+.timer.urgent{color:var(--red)}
+.qris-card{background:var(--navy);border-radius:16px;padding:22px 18px;text-align:center;color:#fff;margin-bottom:10px}
+.qris-head{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed rgba(255,255,255,.2)}
+.qris-head svg{width:18px;height:18px;color:rgba(255,255,255,.85);flex:none}
+.qris-brand{font-size:17px;font-weight:800}
+.qr-box{display:inline-block;padding:10px;background:#fff;border-radius:12px;margin-bottom:12px}
+.qr-box img{display:block;width:160px;height:160px;object-fit:contain;border-radius:4px}
+.qr-fallback{width:160px;height:160px;display:flex;align-items:center;justify-content:center;padding:14px;font-size:11px;font-weight:600;color:var(--muted);text-align:center;line-height:1.5}
+.qris-wordmark{font-size:26px;font-weight:800;letter-spacing:.14em;line-height:1}
+.qris-standard{font-size:9px;font-weight:600;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em;margin-top:5px}
+.qris-scan{display:inline-block;margin-top:10px;padding:5px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:10px;font-weight:700;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.08em}
+.qris-amount{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.2)}
+.qris-amount-label{font-size:9px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em}
+.qris-amount-val{font-size:22px;font-weight:800;margin-top:3px;font-variant-numeric:tabular-nums}
+.qris-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.2);font-size:10px;font-weight:600;color:rgba(255,255,255,.55)}
+.qris-methods{display:flex;gap:10px;color:rgba(255,255,255,.7)}
+.qris-methods svg{width:14px;height:14px}
+.scan-hint{margin:0 0 16px;font-size:12px;color:var(--soft);display:flex;align-items:center;justify-content:center;gap:6px}
+.scan-hint svg{width:14px;height:14px;color:var(--accent);flex:none}
+.upload-area{display:block;border:1.5px dashed var(--line-strong);border-radius:14px;padding:24px 16px;text-align:center;cursor:pointer;background:var(--surface)}
+.upload-area:hover{border-color:var(--accent);background:var(--accent-soft)}
+.upload-area:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-ring)}
+.upload-icon{width:38px;height:38px;margin:0 auto 8px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent)}
+.upload-icon svg{width:18px;height:18px}
+.upload-title{display:block;font-size:14px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.upload-desc{display:block;font-size:12px;color:var(--soft);line-height:1.5}
+.file-types{display:inline-flex;gap:5px;margin-top:8px}
+.file-types span{background:var(--fill);color:var(--soft);font-size:9px;font-weight:800;padding:3px 8px;border-radius:5px;letter-spacing:.05em}
+.sr-only-file{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.preview{margin-top:14px;padding:12px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.preview img{width:100%;max-height:260px;object-fit:contain;border-radius:10px;background:#fff}
+.file-name{margin-top:9px;font-size:12px;font-weight:700;color:var(--accent);word-break:break-word;display:flex;align-items:center;gap:6px}
+.file-name svg{width:13px;height:13px;flex:none}
+.success-msg{margin-top:5px;font-weight:600;font-size:12px;color:var(--green);display:flex;align-items:center;gap:6px}
+.success-msg svg{width:13px;height:13px;flex:none}
+.check{display:flex;gap:12px;align-items:flex-start;background:var(--surface);padding:12px;border-radius:10px;border:1px solid var(--line);margin-top:14px}
+.check input{width:18px;height:18px;min-width:18px;accent-color:var(--accent);cursor:pointer;margin-top:1px}
+.check label{font-size:12px;color:var(--body);cursor:pointer;line-height:1.5}
+.submit-btn{width:100%;padding:14px;border:0;border-radius:12px;font-weight:800;font-size:14px;cursor:pointer;background:var(--accent);color:#fff;margin-top:14px;display:inline-flex;justify-content:center;align-items:center;gap:8px;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.submit-btn:hover:not(:disabled){background:var(--accent-deep)}
+.submit-btn:active:not(:disabled){background:var(--accent-press)}
+.submit-btn:disabled{background:var(--fill);color:var(--muted);cursor:not-allowed}
+.submit-btn svg{width:15px;height:15px}
+.loading-overlay{display:none;position:fixed;inset:0;background:rgba(17,24,39,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9999;justify-content:center;align-items:center;padding:18px}
+.loading-overlay.active{display:flex}
+.loading-content{max-width:400px;width:100%;background:#fff;padding:26px 20px;border-radius:18px;box-shadow:0 24px 60px rgba(17,24,39,.3);text-align:center}
+.ring-wrap{position:relative;width:120px;height:120px;margin:0 auto 18px}
+.ring{transform:rotate(-90deg);width:100%;height:100%}
+.ring-bg{fill:none;stroke:var(--fill);stroke-width:9}
+.ring-fill{fill:none;stroke:var(--accent);stroke-width:9;stroke-linecap:round;transition:stroke-dashoffset .3s linear}
+.ring-icon{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:34px;height:34px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 5px 15px var(--accent-ring)}
+.ring-icon svg{width:15px;height:15px;color:#fff}
+.ring-percent{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-num{font-size:28px;font-weight:800;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+.ring-pct{font-size:12px;font-weight:800;color:var(--accent)}
+.loading-title{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.loading-subtitle{font-size:12px;color:var(--soft);margin-bottom:16px;min-height:18px}
+.loading-steps{display:flex;flex-direction:column;gap:7px;text-align:left}
+.step-item{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:10px;background:var(--surface);border:1px solid var(--line);opacity:.55}
+.step-item.active{opacity:1;background:var(--accent-soft);border-color:var(--accent-line)}
+.step-item.done{opacity:1;background:var(--green-tint);border-color:#a7f3d0}
+.step-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--fill);color:var(--soft);flex:none}
+.step-item.active .step-icon{background:var(--accent);color:#fff}
+.step-item.done .step-icon{background:var(--green);color:#fff}
+.step-icon svg{width:13px;height:13px}
+.step-icon .icon-check{display:none}
+.step-item.done .icon-main{display:none}
+.step-item.done .icon-check{display:block}
+.step-text{font-size:11px;font-weight:700;color:var(--ink)}
+.loading-bar-wrap{margin-top:16px;width:100%;height:7px;background:var(--fill);border-radius:999px;overflow:hidden}
+.loading-bar{height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .3s linear}
+.loading-time{margin-top:8px;font-size:10px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:1px}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:0 10px 30px rgba(17,24,39,.25);z-index:10000;max-width:calc(100vw - 40px);text-align:center}
+.nojs-warning{background:#fffbeb;border-bottom:1px solid #fde68a;color:#92400e;font-size:12px;font-weight:600;text-align:center;padding:10px 16px;line-height:1.5}
+@media (max-width:480px){.container{box-shadow:0 0 0 1px rgba(17,24,39,.04)}}
+@media (max-width:380px){
+.content{padding:22px 14px 28px}
+.progress{padding:14px 15px 16px}
+.step-label{font-size:9px}
+.qr-box img,.qr-fallback{width:140px;height:140px}
+.qris-wordmark{font-size:23px}
+.qris-amount-val{font-size:20px}
+.total-price{font-size:23px}
+}
+@media (prefers-reduced-motion:reduce){.ring-fill,.loading-bar{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="app-header">
+    <div class="topbar">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="YESPLIS" class="logo-img" width="38" height="38">
+        <span class="logo-text">YESPLIS</span>
+      </a>
+      <span class="lang" title="Bahasa Indonesia">ID</span>
+    </div>
+
+    <div class="progress" aria-label="Progress pemesanan">
+      <div class="progress-inner">
+        <div class="progress-track" aria-hidden="true"><div class="progress-fill"></div></div>
+        <ol class="progress-steps">
+          <li class="step completed">
+            <div class="step-dot"><span class="step-num">1</span><svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="step-label">Pilih Tiket</span>
+          </li>
+          <li class="step completed">
+            <div class="step-dot"><span class="step-num">2</span><svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="step-label">Data Pembeli</span>
+          </li>
+          <li class="step active" aria-current="step">
+            <div class="step-dot"><span class="step-num">3</span><svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="step-label">Pembayaran</span>
+          </li>
+          <li class="step">
+            <div class="step-dot"><span class="step-num">4</span><svg class="step-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="step-label">E-Ticket</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </header>
+
+  <noscript><div class="nojs-warning">JavaScript dinonaktifkan. Aktifkan JavaScript di browser Anda untuk melihat detail pesanan dan melakukan pembayaran.</div></noscript>
+
+  <main class="content">
+    <h1 class="page-title">Pembayaran QRIS</h1>
+    <p class="page-subtitle">Selesaikan pembayaran untuk mengonfirmasi pesanan</p>
+
+    <section class="card" aria-label="Ringkasan pesanan">
+      <div class="order-label">Order ID</div>
+      <div id="orderId" class="order-id">-</div>
+      <div class="total-label">Total Pembayaran</div>
+      <div id="total" class="total-price">Rp 0</div>
+      <div id="couponNote" class="coupon-note" hidden></div>
+      <div id="noOrder" class="no-order" hidden>Belum ada data pesanan. <a href="tiket.html">Pilih tiket terlebih dahulu</a>.</div>
+      <div class="detail-grid">
+        <div class="detail-item">Kategori Tiket<span id="jenisTiket">-</span></div>
+        <div class="detail-item">Jumlah Tiket<span id="jumlahTiket">0</span></div>
+        <div class="detail-item">Nama Pemesan<span id="namaPemesan">-</span></div>
+        <div class="detail-item">WhatsApp<span id="waPemesan">-</span></div>
+      </div>
+    </section>
+
+    <div class="timer-box">
+      <div class="timer-label">Selesaikan pembayaran dalam</div>
+      <div id="timer" class="timer" role="timer" aria-label="Waktu tersisa pembayaran">03:00</div>
+    </div>
+
+    <section class="qris-card" aria-label="Kode QR pembayaran">
+      <div class="qris-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+        <span class="qris-brand">Yesplis</span>
+      </div>
+      <div class="qr-box" id="qrBox">
+        <img src="qris.png" alt="Kode QRIS pembayaran" width="160" height="160" decoding="async">
+      </div>
+      <div class="qris-wordmark">QRIS</div>
+      <div class="qris-standard">QR Code Standar Pembayaran Nasional</div>
+      <div class="qris-scan">Scan untuk Pembayaran</div>
+      <div class="qris-amount">
+        <div class="qris-amount-label">Jumlah Pembayaran</div>
+        <div id="qrisTotalAmount" class="qris-amount-val">Rp 0</div>
+      </div>
+      <div class="qris-foot">
+        <span>Pembayaran QRIS &bull; Yesplis</span>
+        <span class="qris-methods" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+        </span>
+      </div>
+    </section>
+
+    <p class="scan-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/></svg>
+      Scan dengan aplikasi e-wallet atau mobile banking
+    </p>
+
+    <section class="card" aria-label="Unggah bukti pembayaran">
+      <label class="upload-area" for="file">
+        <input id="file" type="file" accept="image/jpeg,image/png" class="sr-only-file" aria-label="Pilih file bukti pembayaran">
+        <span class="upload-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        </span>
+        <span class="upload-title">Upload Bukti Pembayaran</span>
+        <span class="upload-desc">Klik area ini untuk memilih bukti transfer QRIS</span>
+        <span class="file-types" aria-hidden="true"><span>JPG</span><span>PNG</span><span>JPEG</span></span>
+      </label>
+
+      <div id="preview" class="preview" hidden>
+        <img id="previewImg" alt="Preview bukti pembayaran">
+        <div id="fileName" class="file-name"></div>
+        <div class="success-msg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Bukti pembayaran berhasil dipilih
+        </div>
+      </div>
+
+      <div class="check">
+        <input type="checkbox" id="cek">
+        <label for="cek">Saya menyatakan telah melakukan pembayaran dan mengunggah bukti pembayaran yang valid.</label>
+      </div>
+
+      <button id="btn" type="button" class="submit-btn" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Konfirmasi Pembayaran
+      </button>
+    </section>
+  </main>
+</div>
+
+<div id="loading" class="loading-overlay" role="status">
+  <div class="loading-content">
+    <div class="ring-wrap">
+      <div class="ring-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      </div>
+      <svg class="ring" viewBox="0 0 180 180" aria-hidden="true">
+        <circle class="ring-bg" cx="90" cy="90" r="80"></circle>
+        <circle id="progressCircle" class="ring-fill" cx="90" cy="90" r="80"></circle>
+      </svg>
+      <div class="ring-percent">
+        <span class="ring-num" id="progressNum">0</span>
+        <span class="ring-pct">%</span>
+      </div>
+    </div>
+    <div class="loading-title">Memproses Pembayaran</div>
+    <div class="loading-subtitle" id="loadingSubtitle">Mohon tunggu, jangan tutup halaman ini...</div>
+    <div class="loading-steps">
+      <div class="step-item">
+        <div class="step-icon">
+          <svg class="icon-main" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="step-text">Verifikasi keamanan transaksi</div>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">
+          <svg class="icon-main" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="step-text">Validasi bukti pembayaran</div>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">
+          <svg class="icon-main" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+          <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="step-text">Konfirmasi ke sistem bank</div>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">
+          <svg class="icon-main" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+          <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="step-text">Penerbitan e-tiket</div>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">
+          <svg class="icon-main" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="step-text">Finalisasi pesanan</div>
+      </div>
+    </div>
+    <div class="loading-bar-wrap"><div class="loading-bar" id="loadingBar"></div></div>
+    <div class="loading-time" id="loadingTime">00:00 / 03:00</div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+'use strict';
+
+var store={
+get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
+set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}},
+del:function(k){try{localStorage.removeItem(k)}catch(e){}}
+};
+
+function safeJSON(value,fallback){
+try{
+var parsed=JSON.parse(value);
+return parsed===null||parsed===undefined?fallback:parsed;
+}catch(e){return fallback}
+}
+
+function formatRupiah(n){
+return 'Rp '+(Math.round(Number(n)||0)).toLocaleString('id-ID');
+}
+function padZero(n){
+return n<10?'0'+n:String(n);
+}
+function formatTime(sec){
+return padZero(Math.floor(sec/60))+':'+padZero(sec%60);
+}
+
+var order=safeJSON(store.get('data_pemesan'),{});
+if(!order||typeof order!=='object')order={};
+var cart=(order.cart&&typeof order.cart==='object')?order.cart:{};
+var qty=Number(cart.qty)||0;
+var harga=Number(cart.harga)||0;
+var subtotal=Number(cart.totalPrice);
+if(!Number.isFinite(subtotal))subtotal=qty*harga;
+var kupon=(order.kupon&&typeof order.kupon==='object')?order.kupon:null;
+var kuponNominal=kupon?Math.max(0,Math.min(Number(kupon.nominal)||0,subtotal)):0;
+var pakaiKupon=kuponNominal>0;
+var totalBayar=Math.max(0,Math.round(subtotal-kuponNominal));
+var hasOrder=qty>0&&Boolean(cart.jenis)&&cart.jenis!=='-';
+
+var el=function(id){return document.getElementById(id)};
+var orderIdEl=el('orderId');
+var totalEl=el('total');
+var couponNoteEl=el('couponNote');
+var noOrderEl=el('noOrder');
+var jenisTiketEl=el('jenisTiket');
+var jumlahTiketEl=el('jumlahTiket');
+var namaPemesanEl=el('namaPemesan');
+var waPemesanEl=el('waPemesan');
+var qrisTotalEl=el('qrisTotalAmount');
+var timerEl=el('timer');
+var fileInput=el('file');
+var cekInput=el('cek');
+var btn=el('btn');
+var previewBox=el('preview');
+var previewImg=el('previewImg');
+var fileNameEl=el('fileName');
+var loadingOverlay=el('loading');
+var ringFill=el('progressCircle');
+var ringNum=el('progressNum');
+var barEl=el('loadingBar');
+var timeEl=el('loadingTime');
+var subtitleEl=el('loadingSubtitle');
+var toastEl=el('toast');
+
+var toastTimer;
+function toast(msg){
+toastEl.textContent=msg;
+toastEl.hidden=false;
+clearTimeout(toastTimer);
+toastTimer=setTimeout(function(){toastEl.hidden=true;},2800);
+}
+
+var logoImg=document.querySelector('.logo-img');
+if(logoImg)logoImg.addEventListener('error',function(){logoImg.style.display='none';});
+
+var qrImg=document.querySelector('#qrBox img');
+if(qrImg)qrImg.addEventListener('error',function(){
+qrImg.style.display='none';
+var msg=document.createElement('div');
+msg.className='qr-fallback';
+msg.textContent='Kode QR tidak dapat dimuat. Muat ulang halaman atau hubungi panitia.';
+document.getElementById('qrBox').appendChild(msg);
+});
+
+var currentSign=String(store.get('data_pemesan')||'');
+var orderId=store.get('commvaganza_order_id');
+var savedSign=store.get('commvaganza_order_sign');
+if(!orderId||savedSign!==currentSign){
+orderId='CMV-'+Date.now();
+store.set('commvaganza_order_id',orderId);
+store.set('commvaganza_order_sign',currentSign);
+}
+orderIdEl.textContent=orderId||'CMV-LOCAL';
+
+var totalStr=formatRupiah(hasOrder?totalBayar:0);
+totalEl.textContent=totalStr;
+qrisTotalEl.textContent=totalStr;
+jenisTiketEl.textContent=cart.jenis||'-';
+jumlahTiketEl.textContent=qty;
+namaPemesanEl.textContent=order.nama||'-';
+waPemesanEl.textContent=order.wa||'-';
+if(pakaiKupon){
+couponNoteEl.textContent='Termasuk diskon kupon '+kupon.kode+' '+kupon.persen+'% (\u2212'+formatRupiah(kuponNominal)+' dari '+formatRupiah(subtotal)+')';
+couponNoteEl.hidden=false;
+}
+if(!hasOrder)noOrderEl.hidden=false;
+if(hasOrder)store.set('commvaganza_total_bayar',String(totalBayar));
+
+var duration=180;
+var timerInterval=null;
+var isProcessing=false;
+
+function timerTick(){
+if(isProcessing)return;
+timerEl.textContent=padZero(Math.floor(duration/60))+':'+padZero(duration%60);
+timerEl.classList.toggle('urgent',duration<=30&&duration>0);
+if(duration<=0){
+clearInterval(timerInterval);
+toast('Waktu pembayaran habis. Mengarahkan ke halaman utama...');
+setTimeout(function(){window.location.href='index.html';},1800);
+return;
+}
+duration--;
+}
+timerTick();
+timerInterval=setInterval(timerTick,1000);
+
+var MAX_FILE_SIZE=10*1024*1024;
+var ALLOWED_TYPES=['image/jpeg','image/png'];
+var uploaded=false;
+var objectUrl='';
+
+function checkButton(){
+btn.disabled=!(hasOrder&&uploaded&&cekInput.checked);
+}
+
+var ICON_FILE_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>';
+
+fileInput.addEventListener('change',function(){
+var file=this.files&&this.files[0];
+if(!file)return;
+if(!file.type||ALLOWED_TYPES.indexOf(file.type)===-1){
+this.value='';
+uploaded=false;
+previewBox.hidden=true;
+checkButton();
+toast('Format file tidak didukung. Gunakan foto dengan format JPG, JPEG, atau PNG.');
+return;
+}
+if(file.size>MAX_FILE_SIZE){
+this.value='';
+uploaded=false;
+previewBox.hidden=true;
+checkButton();
+toast('Ukuran file maksimal 10 MB. Silakan kompres atau ambil ulang foto bukti transfer.');
+return;
+}
+uploaded=true;
+store.set('commvaganza_payment_receipt',file.name);
+if(objectUrl)URL.revokeObjectURL(objectUrl);
+objectUrl=URL.createObjectURL(file);
+previewImg.src=objectUrl;
+fileNameEl.innerHTML=ICON_FILE_SVG;
+fileNameEl.appendChild(document.createTextNode(file.name));
+previewBox.hidden=false;
+checkButton();
+});
+
+cekInput.addEventListener('change',checkButton);
+checkButton();
+
+var LOADING_DURATION=180000;
+var CIRCUMFERENCE=2*Math.PI*80;
+ringFill.style.strokeDasharray=CIRCUMFERENCE;
+ringFill.style.strokeDashoffset=CIRCUMFERENCE;
+
+var subtitles=[
+'Sedang memverifikasi data pembayaran Anda...',
+'Menghubungkan ke server bank...',
+'Memvalidasi bukti transfer QRIS...',
+'Memproses transaksi keamanan...',
+'Menyinkronkan data pesanan...',
+'Menerbitkan e-tiket Anda...',
+'Hampir selesai, mohon tunggu...'
+];
+var stepEls=Array.prototype.slice.call(document.querySelectorAll('.step-item'));
+
+function startProcessing(){
+if(isProcessing)return;
+isProcessing=true;
+clearInterval(timerInterval);
+loadingOverlay.classList.add('active');
+document.body.classList.add('no-scroll');
+var startTime=Date.now();
+var lastPercent=-1;
+var lastSec=-1;
+var lastSub=-1;
+var lastStep=-1;
+
+function update(){
+var elapsed=Date.now()-startTime;
+var progress=Math.min(elapsed/LOADING_DURATION,1);
+var percent=Math.floor(progress*100);
+var sec=Math.floor(elapsed/1000);
+
+ringFill.style.strokeDashoffset=CIRCUMFERENCE*(1-progress);
+barEl.style.width=percent+'%';
+
+if(percent!==lastPercent){
+lastPercent=percent;
+ringNum.textContent=percent;
+}
+if(sec!==lastSec){
+lastSec=sec;
+timeEl.textContent=formatTime(sec)+' / 03:00';
+}
+var subIdx=Math.min(Math.floor(progress*subtitles.length),subtitles.length-1);
+if(subIdx!==lastSub){
+lastSub=subIdx;
+subtitleEl.textContent=subtitles[subIdx];
+}
+var activeStep=Math.min(Math.floor(progress*stepEls.length),stepEls.length-1);
+if(activeStep!==lastStep){
+lastStep=activeStep;
+stepEls.forEach(function(item,idx){
+if(idx<activeStep){
+item.classList.add('done');
+item.classList.remove('active');
+}else if(idx===activeStep){
+item.classList.add('active');
+item.classList.remove('done');
+}
+});
+}
+
+if(progress<1){
+requestAnimationFrame(update);
+}else{
+stepEls.forEach(function(item){
+item.classList.remove('active');
+item.classList.add('done');
+});
+subtitleEl.textContent='Pembayaran berhasil dikonfirmasi!';
+setTimeout(function(){window.location.href='success.html';},1000);
+}
+}
+requestAnimationFrame(update);
+}
+
+btn.addEventListener('click',function(){
+if(btn.disabled)return;
+startProcessing();
+});
+})();
+</script>
+
+</body>
+</html>
